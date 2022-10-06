@@ -1,0 +1,47 @@
+*,
+*:after,
+*:before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+$yellow: #FEC260
+$purple: #A12568
+
+#root
+    height: 100%
+    div
+        height: 100%
+
+body
+    width: 100%
+    height: 100vh
+    background: url('./assets/MainBackground.jpg')
+    font-family: 'Oswald'
+
+.main
+    height: 40em
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__title
+        font-size: 70px
+        color: $yellow
+        text-transform: uppercase
+    &__btn
+        min-width: 375px
+        height: 60px
+        background-color: $yellow
+        border: none
+        border-radius: 50px
+        font-size: 30px
+        font-family: 'Oswald'
+        line-height: 60px
+        color: $purple
+        transition: .3s
+        font-weight: 700
+        &:hover
+            transform: scale(1.1)
+            background: $purple
+            color: $yellow
