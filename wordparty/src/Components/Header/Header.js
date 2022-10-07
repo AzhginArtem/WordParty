@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import {Link} from "react-router-dom";
 import HomeImage from './../../assets/home.svg'
 import RulesImage from './../../assets/rules.svg'
 import AccountImage from './../../assets/profile.png'
@@ -10,9 +11,9 @@ export default function Header() {
         <header className='header'>
             <ul className='header__menu'>
                 <li className='header__item'>
-                    <a className='header__link' href='#'>
+                    <Link to="/" className='header__link'>
                         <img src={HomeImage} alt='Home'/>
-                    </a>
+                    </Link>
                 </li>
                 <li className='header__item'>
                     <a className='header__link' href='#'>

@@ -1,20 +1,18 @@
-import Header from "./Components/Header/Header";
-import './App.sass'
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Header/>
-      <main className="main">
-        <h1 className="main__title">
-          word party
-        </h1>
-        <button className="main__btn">
-          PLAY
-        </button>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
